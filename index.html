@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>index</title>
+    <title>source</title>
+    <link rel="stylesheet" href="style.css">
     <style>
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
+            font-family: Arial, Helvetica, sans-serif;
             height: 2000px;
             width: 96%;
             margin: 0 auto;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-            /* background-color: dodgerblue; */
         }
         .navbar {
             background-color: black;
@@ -40,15 +40,225 @@
             padding: 14px 20px;
             font-size: 18px;
             text-decoration: none;
+    
         }
         .navbar ul li a:hover {
             background-color: darkgray;
             color: black;
         }
-        .div1 {
+
+        
+        /* start */
+        .button1 {
+            width: 100px;
+            height: 100px;
+            padding: 30px 30px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color:darkslategray;
+            color: white;
+            border: none;
+            border-radius: 0 5px;
+            transition: background-color 0.3s;
+        }
+        
+        .button1:hover {
+            background-color:rgb(25, 56, 56);
+            font-size: 17px;
+            color: gold;
+            font-weight: bold;
+        }
+        .top {
             width: 100%;
-            height: 10%;
+            height: 8%;
             background-color: dodgerblue;
+        }
+        .strong1 {
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 20px;
+            color: gold;
+            background-color: rgb(25, 56, 56);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex: 1 1 200px;
+            text-align: center;
+            min-width: 150px;
+            border-radius: 0 0 5px;
+            transition: opacity 0.3s ease;
+        }
+        .strong1:hover {
+            background-color: darkslategrey;
+            font-size: 24px;
+            color: white;
+        }
+        
+        .div1 {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+        .fordiv {
+            display: flex;
+            background-color: gold;
+            padding: 20px;
+            flex: 1 1 200px;
+            min-width: 250px;
+        }
+        .newdiv {
+            display: flex;
+            padding: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .toflex {
+            display: flex;
+            flex: 1 1 200px;
+            min-width: 250px;
+        }
+
+        .main {
+            padding: 20px;
+            margin-left: 20px;
+        }
+        span {
+            color:maroon;
+        }
+        .span1 {
+            color: orangered;
+        }
+        .span2 {
+            color: blue;
+        }
+        
+        .div2 {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            width: 80%;
+            max-width: 800px;
+            max-height: 80vh; /* Limit height to viewport */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        pre {
+            overflow-y: auto;
+            flex-grow: 1; 
+            padding-right: 10px; 
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+        
+        /* Fullscreen mode styles */
+        .div2.fullscreen {
+            width: 100% !important;
+            height: 100vh !important;
+            max-width: none !important;
+            max-height: none !important;
+            border-radius: 0 !important;
+            padding: 40px;
+        }
+        
+        .fullscreen-btn {
+            position: absolute;
+            top: 15px;
+            right: 60px;
+            background: none;
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+            color: #666;
+        }
+        
+        .close-btn {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            background: none;
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+            color: #666;
+        }
+        
+        .div3 {
+            display: none;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+            /* border-radius: 4px; */
+        }
+        
+        .div4 {
+            margin-top: 20px;
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
+        }
+        
+        .button2 {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        .closed {
+            background-color: #f44336;
+            color: white;
+        }
+        
+        .closed:hover {
+            background-color: #d32f2f;
+        }
+        
+        .button3 {
+            background-color: #2196F3;
+            color: white;
+        }
+        
+        .button3:hover {
+            background-color: #0b7dda;
+        }
+        
+        .div3 {
+            display: none;
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: #f9f9f9;
+        }
+        
+        .button3 {
+            background-color: #2196F3;
+            color: white;
+        }
+        
+        .button3:hover {
+            background-color: #0b7dda;
+        }
+        
+        .div3 {
+            display: none;
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: #f9f9f9;
         }
         .div7 {
             background-color: black;
@@ -63,75 +273,15 @@
         .div7 p {
             margin: 0;
         }
-        .scrolling-content {
-            position: relative;
-            /* z-index: 2; */
-            background-color: rgba(255, 255, 255, 0.9);
-            padding: 50px;
-            margin-top: -0vh; 
-            margin-bottom: 100vh;
-            height: 1000px;
-        }
-
-        button {
-            padding: 30px 30px;
-            font-size: 16px;
-            cursor: pointer;
-            background-color:darkslategray;
-            color: white;
-            border: none;
-            border-radius: 0 5px;
-        }
-        .button1 {
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-            background-color: crimson;
-            color: white;
-            border: none;
-            border-radius: 5px;
-        }
-        button:hover {
-            background-color:rgb(25, 56, 56);
-        }
-        dialog {
-            width: 1000px;
-            padding: 20px;
-            border: 1px solid gainsboro;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            background-color: white;
-        }
-        dialog h2 {
-            margin-top: 0;
-        }
-        dialog pre {
-            margin-bottom: 20px;
-            font-size: 20px;
-        }
-        dialog button {
-            background-color: crimson;
-        }
-        dialog button:hover {
-            background-color: red;
-        }
-        .newdiv {
-            display: flex;
-            justify-content: space-between;
-        }
-        span {
-            color:maroon;
-        }
-        .span1 {
-            color: orangered;
-        }
-        .span2 {
-            color: blue;
+        .divp {
+            width: 80%;
+            max-width: 800px;
+            max-height: 80vh;
         }
     </style>
 </head>
 <body>
-    <div class="div1">
+    <div class="top">
 
     </div>
     <div class="navbar" id="navbar">
@@ -144,20 +294,26 @@
     </div>
 
     <div class="content">
-        <embed src="eyedotblue.jpg" width="100%" class="div2" alt="bg">
+        <embed src="eyedotblue.jpg" width="100%" alt="bg">
     </div>
 
-    <div class="scrolling-content">
-        <h2>Content</h2>
+    <div class="main">
+        <h1>Content</h1>
         <p>Click on disirable box and view the inside content.</p>
-        <div class="newdiv">
+    </div>
+    <!-- code start from here -->
+    <div class="newdiv">
+        <div class="toflex">
             <div class="fordiv">
-                <button id="openButton">Click Here</button>
-                <dialog id="openedDialog">
-                    <h2>This is a Dialog</h2>
-                    <!-- lorem20 -->
+                <button class="button1" id="openButton">Click Here</button>
+                <strong class="strong1">A TAG</strong>
+            </div>
+            <div class="div1" id="opendFirst">
+                <div class="div2" id="dialogContent">
+                    <button class="fullscreen-btn" id="fullscreenBtn">⛶</button>
+                    <button class="close-btn" id="closeButton">×</button>
+                    <h2>A TAG</h2>
 <pre>
-    <html lang="en">
 &lt;<span>!DOCTYPE html</span>&gt;
 &lt;<span>html</span> <span class="span1">lang</span>=<span class="span2">"en"</span>&gt;
 &lt;<span>head</span>head&gt;
@@ -228,14 +384,50 @@
 &lt;/<span>body</span>&gt;
 &lt;/<span>html</span>&gt;
 </pre>
-                    <button class="button1" id="closeDialog">Close</button>
-                </dialog>
+                    
+                    <div class="div3" id="openedFile">
+                        <div class="fora">
+                            <h1> A TAG</h1>
+    <div class="section1">
+        <!-- copy this link form text editor -->
+        <table>
+            <a href="https://youtu.be/Mzp9ntJy15w?si=C0I0Zt3AcA7LaMkt">https://youtu.be/Mzp9ntJy15w?si=C0I0Zt3AcA7LaMkt</a> <br>
+            <a>https://www.google.com/</a>
+        </table>
+    </div>
+    <div class="section2">
+        <table>
+            <a href="https://youtu.be/Mzp9ntJy15w?si=C0I0Zt3AcA7LaMkt">10 HTML TAGS</a> <br>
+            <a href="https://www.google.com/">Google</a>
+        </table>
+    </div> <br>
+    <div id="section3">
+        <a href="https://www.google.com/">Click</a>
+    </div>
+    <div class="section4">
+        <a href="https://www.google.com/">Press</a>
+    </div>
+                        </div>
+                    </div>
+                    
+                    <div class="div4">
+                        <button class="button2 closed" id="closeDialogBtn">Close</button>
+                        <button class="button2 button3" id="openFile">View</button>
+                    </div>
+                </div>
             </div>
+        </div>
+        <!-- new code start again -->
+        <div class="toflex">
             <div class="fordiv">
-                <button id="openButton1">Click Here</button>
-                <dialog id="openedDialog1">
-                    <h2>This is a Dialog</h2>
-                    <!-- lorem20 -->
+                <button class="button1" id="openButton1">Click Here</button>
+                <strong class="strong1">ABBR</strong>
+            </div>
+            <div class="div1" id="opendFirst1">
+                <div class="div2" id="dialogContent1">
+                    <button class="fullscreen-btn" id="fullscreenBtn1">⛶</button>
+                    <button class="close-btn" id="closeButton1">×</button>
+                    <h2>Dialog Content</h2>
 <pre>
 &lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
@@ -261,66 +453,264 @@
     &lt;h1&gt;ABBR TAG&lt;/h1&gt;
     &lt;p&gt;About &lt;abbr title="Master in Computer Application"&gt;MCA&lt;/abbr&gt;&lt;/p&gt;
     &lt;!-- lorem50 --&gt;
-    &lt;p&gt;<p class="p1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint doloribus numquam velit, accusantium ea, sunt dicta unde maxime culpa deserunt libero hic labore? Sequi temporibus veniam voluptatibus velit tempore reprehenderit similique ipsa, dolorum cupiditate ullam cumque eligendi accusantium, consectetur voluptate repudiandae numquam delectus commodi nulla vel maxime natus. Possimus, odit?</p>&lt;/p&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint doloribus numquam velit,
+     accusantium ea, sunt dicta unde maxime culpa deserunt libero hic labore? Sequi temporibus veniam 
+     voluptatibus velit tempore reprehenderit similique ipsa, dolorum cupiditate ullam cumque eligendi 
+     accusantium, consectetur voluptate repudiandae numquam delectus commodi nulla vel maxime natus. 
+     Possimus, odit?&lt;/p&gt;
 &lt;/body&gt;
 &lt;/html&gt;
 </pre>
-                    <button class="button1" id="closeDialog1">Close</button>
-                </dialog>
-            </div>
-            <div class="fordiv">
-                <button id="openButton">Click Here</button>
-                <dialog id="openedDialog">
-                    <h2>This is a Dialog</h2>
-                    <!-- lorem20 -->
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam odio soluta, doloribus necessitatibus id eius quis nam debitis repellendus eveniet.</p>
-                    <button class="button1" id="closeDialog">Close</button>
-                </dialog>
-            </div>
-            <div class="fordiv">
-                <button id="openButton">Click Here</button>
-                <dialog id="openedDialog">
-                    <h2>This is a Dialog</h2>
-                    <!-- lorem20 -->
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam odio soluta, doloribus necessitatibus id eius quis nam debitis repellendus eveniet.</p>
-                    <button class="button1" id="closeDialog">Close</button>
-                </dialog>
-            </div>
-            <div class="fordiv">
-                <button id="openButton">Click Here</button>
-                <dialog id="openedDialog">
-                    <h2>This is a Dialog</h2>
-                    <!-- lorem20 -->
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam odio soluta, doloribus necessitatibus id eius quis nam debitis repellendus eveniet.</p>
-                    <button class="button1" id="closeDialog">Close</button>
-                </dialog>
-            </div>
-            <div class="fordiv">
-                <button id="openButton">Click Here</button>
-                <dialog id="openedDialog">
-                    <h2>This is a Dialog</h2>
-                    <!-- lorem20 -->
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam odio soluta, doloribus necessitatibus id eius quis nam debitis repellendus eveniet.</p>
-                    <button class="button1" id="closeDialog">Close</button>
-                </dialog>
-            </div>
-            <div class="fordiv">
-                <button id="openButton">Click Here</button>
-                <dialog id="openedDialog">
-                    <h2>This is a Dialog</h2>
-                    <!-- lorem20 -->
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam odio soluta, doloribus necessitatibus id eius quis nam debitis repellendus eveniet.</p>
-                    <button class="button1" id="closeDialog">Close</button>
-                </dialog>
+                    
+                    <div class="div3" id="openedFile1">
+                        <h3>File Content</h3>
+                        <p>This content appears when you click "Open File". You can put any information here.</p>
+                        <p>In a real application, this could be content loaded from an external file.</p>
+                    </div>
+                    
+                    <div class="div4">
+                        <button class="button2 closed" id="closeDialogBtn1">Close</button>
+                        <button class="button2 button3" id="openFile1">View</button>
+                    </div>
+                </div>
             </div>
         </div>
+        <!-- new code start again -->
+        <div class="toflex">
+            <div class="fordiv">
+                <button class="button1" id="openButton">Click Here</button>
+                <strong class="strong1">ADDRESS</strong>
+            </div>
+            <div class="div1" id="opendFirst">
+                <div class="div2" id="dialogContent">
+                    <button class="fullscreen-btn" id="fullscreenBtn">⛶</button>
+                    <button class="close-btn" id="closeButton">×</button>
+                    <h2>Dialog Content</h2>
+<pre>
+    
+</pre>
+                    
+                    <div class="div3" id="openedFile">
+                        <h3>File Content</h3>
+                        <p>This content appears when you click "Open File". You can put any information here.</p>
+                        <p>In a real application, this could be content loaded from an external file.</p>
+                    </div>
+                    
+                    <div class="div4">
+                        <button class="button2 closed" id="closeDialogBtn">Close</button>
+                        <button class="button2 button3" id="openFile">View</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- new code start again -->
+        <div class="toflex">
+            <div class="fordiv">
+                <button class="button1" id="openButton">Click Here</button>
+                <strong class="strong1">ARTICLE</strong>
+            </div>
+            <div class="div1" id="opendFirst">
+                <div class="div2" id="dialogContent">
+                    <button class="fullscreen-btn" id="fullscreenBtn">⛶</button>
+                    <button class="close-btn" id="closeButton">×</button>
+                    <h2>Dialog Content</h2>
+<pre>
+    
+</pre>
+                    
+                    <div class="div3" id="openedFile">
+                        <h3>File Content</h3>
+                        <p>This content appears when you click "Open File". You can put any information here.</p>
+                        <p>In a real application, this could be content loaded from an external file.</p>
+                    </div>
+                    
+                    <div class="div4">
+                        <button class="button2 closed" id="closeDialogBtn">Close</button>
+                        <button class="button2 button3" id="openFile">View</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- new code start again -->
+        <div class="toflex">
+            <div class="fordiv">
+                <button class="button1" id="openButton">Click Here</button>
+                <strong class="strong1">ASIDE</strong>
+            </div>
+            <div class="div1" id="opendFirst">
+                <div class="div2" id="dialogContent">
+                    <button class="fullscreen-btn" id="fullscreenBtn">⛶</button>
+                    <button class="close-btn" id="closeButton">×</button>
+                    <h2>Dialog Content</h2>
+<pre>
+    
+</pre>
+                    
+                    <div class="div3" id="openedFile">
+                        <h3>File Content</h3>
+                        <p>This content appears when you click "Open File". You can put any information here.</p>
+                        <p>In a real application, this could be content loaded from an external file.</p>
+                    </div>
+                    
+                    <div class="div4">
+                        <button class="button2 closed" id="closeDialogBtn">Close</button>
+                        <button class="button2 button3" id="openFile">View</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- new code start again -->
+        <div class="toflex">
+            <div class="fordiv">
+                <button class="button1" id="openButton">Click Here</button>
+                <strong class="strong1">AUDIO</strong>
+            </div>
+            <div class="div1" id="opendFirst">
+                <div class="div2" id="dialogContent">
+                    <button class="fullscreen-btn" id="fullscreenBtn">⛶</button>
+                    <button class="close-btn" id="closeButton">×</button>
+                    <h2>Dialog Content</h2>
+<pre>
+    
+</pre>
+                    
+                    <div class="div3" id="openedFile">
+                        <h3>File Content</h3>
+                        <p>This content appears when you click "Open File". You can put any information here.</p>
+                        <p>In a real application, this could be content loaded from an external file.</p>
+                    </div>
+                    
+                    <div class="div4">
+                        <button class="button2 closed" id="closeDialogBtn">Close</button>
+                        <button class="button2 button3" id="openFile">View</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- new code start again -->
+        <div class="toflex">
+            <div class="fordiv">
+                <button class="button1" id="openButton">Click Here</button>
+                <strong class="strong1">B TAG</strong>
+            </div>
+            <div class="div1" id="opendFirst">
+                <div class="div2" id="dialogContent">
+                    <button class="fullscreen-btn" id="fullscreenBtn">⛶</button>
+                    <button class="close-btn" id="closeButton">×</button>
+                    <h2>Dialog Content</h2>
+<pre>
+    
+</pre>
+                    
+                    <div class="div3" id="openedFile">
+                        <h3>File Content</h3>
+                        <p>This content appears when you click "Open File". You can put any information here.</p>
+                        <p>In a real application, this could be content loaded from an external file.</p>
+                    </div>
+                    
+                    <div class="div4">
+                        <button class="button2 closed" id="closeDialogBtn">Close</button>
+                        <button class="button2 button3" id="openFile">View</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- new code start again -->
+        <div class="toflex">
+            <div class="fordiv">
+                <button class="button1" id="openButton">Click Here</button>
+                <strong class="strong1">BASE</strong>
+            </div>
+            <div class="div1" id="opendFirst">
+                <div class="div2" id="dialogContent">
+                    <button class="fullscreen-btn" id="fullscreenBtn">⛶</button>
+                    <button class="close-btn" id="closeButton">×</button>
+                    <h2>Dialog Content</h2>
+<pre>
+    
+</pre>
+                    
+                    <div class="div3" id="openedFile">
+                        <h3>File Content</h3>
+                        <p>This content appears when you click "Open File". You can put any information here.</p>
+                        <p>In a real application, this could be content loaded from an external file.</p>
+                    </div>
+                    
+                    <div class="div4">
+                        <button class="button2 closed" id="closeDialogBtn">Close</button>
+                        <button class="button2 button3" id="openFile">View</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- new code start again -->
+        <div class="toflex">
+            <div class="fordiv">
+                <button class="button1" id="openButton">Click Here</button>
+                <strong class="strong1">BDI</strong>
+            </div>
+            <div class="div1" id="opendFirst">
+                <div class="div2" id="dialogContent">
+                    <button class="fullscreen-btn" id="fullscreenBtn">⛶</button>
+                    <button class="close-btn" id="closeButton">×</button>
+                    <h2>Dialog Content</h2>
+<pre>
+    
+</pre>
+                    
+                    <div class="div3" id="openedFile">
+                        <h3>File Content</h3>
+                        <p>This content appears when you click "Open File". You can put any information here.</p>
+                        <p>In a real application, this could be content loaded from an external file.</p>
+                    </div>
+                    
+                    <div class="div4">
+                        <button class="button2 closed" id="closeDialogBtn">Close</button>
+                        <button class="button2 button3" id="openFile">View</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- new code start again -->
+        <div class="toflex">
+            <div class="fordiv">
+                <button class="button1" id="openButton">Open Dialog</button>
+                <strong class="strong1">BDO</strong>
+            </div>
+            <div class="div1" id="opendFirst">
+                <div class="div2" id="dialogContent">
+                    <button class="fullscreen-btn" id="fullscreenBtn">⛶</button>
+                    <button class="close-btn" id="closeButton">×</button>
+                    <h2>Dialog Content</h2>
+<pre>
+    
+</pre>
+                    
+                    <div class="div3" id="openedFile">
+                        <h3>File Content</h3>
+                        <p>This content appears when you click "Open File". You can put any information here.</p>
+                        <p>In a real application, this could be content loaded from an external file.</p>
+                    </div>
+                    
+                    <div class="div4">
+                        <button class="button2 closed" id="closeDialogBtn">Close</button>
+                        <button class="button2 button3" id="openFile">View</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- new code start again -->
+        <!-- new code start again -->
+        <!-- new code start again -->
     </div>
 
     <div class="div7">
-        <p>&copy; 2025 Div Tag. All rights reserved.</p>
+        <p>&copy; 2025 Source. All rights reserved.</p>
     </div>
+    
 
     <script>
+        // for sticky
         window.onscroll = function() {stickyNavbar()};
         
         var navbar = document.getElementById("navbar");
@@ -333,30 +723,123 @@
                 navbar.classList.remove("sticky");
             }
         }
-        /*For button0*/
-        const dialog = document.getElementById('openedDialog');
-        const openDialogButton = document.getElementById('openButton');
-        const closeDialogButton = document.getElementById('closeDialog');
-
-        openDialogButton.addEventListener('click', () => {
-            dialog.showModal();
+        //for a tag
+        // Get DOM elements
+        const openButton = document.getElementById('openButton');
+        const opendFirst = document.getElementById('opendFirst');
+        const closeButton = document.getElementById('closeButton');
+        const closeDialogBtn = document.getElementById('closeDialogBtn');
+        const openFile = document.getElementById('openFile');
+        const openedFile = document.getElementById('openedFile');
+        const fullscreenBtn = document.getElementById('fullscreenBtn');
+        const dialogContent = document.getElementById('dialogContent');
+        
+        // Open dialog
+        openButton.addEventListener('click', function() {
+            opendFirst.style.display = 'flex';
+            dialogContent.classList.remove('fullscreen');
         });
-
-        closeDialogButton.addEventListener('click', () => {
-            dialog.close();
+        
+        // Close dialog (both close buttons)
+        closeButton.addEventListener('click', closeDialog);
+        closeDialogBtn.addEventListener('click', closeDialog);
+        
+        function closeDialog() {
+            opendFirst.style.display = 'none';
+            openedFile.style.display = 'none';
+        }
+        
+        // Click outside to close
+        opendFirst.addEventListener('click', function(e) {
+            if (e.target === opendFirst) {
+                closeDialog();
+            }
         });
-
-        /*For button1*/
-        const dialog1 = document.getElementById('openedDialog1');
-        const openDialogButton1 = document.getElementById('openButton1');
-        const closeDialogButton1 = document.getElementById('closeDialog1');
-
-        openDialogButton1.addEventListener('click', () => {
-            dialog1.showModal();
+        
+        // Open file content
+        openFile.addEventListener('click', function() {
+            openFile.textContent = 'Loading...';
+            openFile.disabled = true;
+            
+            setTimeout(function() {
+                openedFile.style.display = 'block';
+                openFile.textContent = 'Open File';
+                openFile.disabled = false;
+            }, 500);
         });
-
-        closeDialogButton1.addEventListener('click', () => {
-            dialog1.close();
+        
+        // Toggle fullscreen
+        fullscreenBtn.addEventListener('click', function() {
+            dialogContent.classList.toggle('fullscreen');
+            // Update icon
+            fullscreenBtn.textContent = dialogContent.classList.contains('fullscreen') ? '⛶' : '⛶';
+        });
+        
+        // Exit fullscreen when pressing Escape
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && dialogContent.classList.contains('fullscreen')) {
+                dialogContent.classList.remove('fullscreen');
+                fullscreenBtn.textContent = '⛶';
+            }
+        });
+        //for abbr tag
+        // Get DOM elements
+        const openButton1 = document.getElementById('openButton1');
+        const opendFirst1 = document.getElementById('opendFirst1');
+        const closeButton1 = document.getElementById('closeButton1');
+        const closeDialogBtn1 = document.getElementById('closeDialogBtn1');
+        const openFile1 = document.getElementById('openFile1');
+        const openedFile1 = document.getElementById('openedFile1');
+        const fullscreenBtn1 = document.getElementById('fullscreenBtn1');
+        const dialogContent1 = document.getElementById('dialogContent1');
+        
+        // Open dialog
+        openButton1.addEventListener('click', function() {
+            opendFirst1.style.display = 'flex';
+            dialogContent1.classList.remove('fullscreen');
+        });
+        
+        // Close dialog (both close buttons)
+        closeButton1.addEventListener('click', closeDialog1);
+        closeDialogBtn1.addEventListener('click', closeDialog1);
+        
+        function closeDialog1() {
+            opendFirst1.style.display = 'none';
+            openedFile1.style.display = 'none';
+        }
+        
+        // Click outside to close
+        opendFirst1.addEventListener('click', function(e) {
+            if (e.target === opendFirst1) {
+                closeDialog1();
+            }
+        });
+        
+        // Open file content
+        openFile1.addEventListener('click', function() {
+            openFile1.textContent = 'Loading...';
+            openFile1.disabled = true;
+            
+            setTimeout(function() {
+                openedFile1.style.display = 'block';
+                openFile1.textContent = 'Open File';
+                openFile1.disabled = false;
+            }, 500);
+        });
+        
+        // Toggle fullscreen
+        fullscreenBtn1.addEventListener('click', function() {
+            dialogContent1.classList.toggle('fullscreen');
+            // Update icon
+            fullscreenBtn1.textContent = dialogContent1.classList.contains('fullscreen') ? '⛶' : '⛶';
+        });
+        
+        // Exit fullscreen when pressing Escape
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && dialogContent1.classList.contains('fullscreen')) {
+                dialogContent1.classList.remove('fullscreen');
+                fullscreenBtn1.textContent = '⛶';
+            }
         });
     </script>
 </body>
