@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            height: 2000px;
+            width: 96%;
+            margin: 0 auto;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            /* background-color: dodgerblue; */
+        }
+        .navbar {
+            background-color: black;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        .navbar.sticky {
+            position: fixed;
+            top: 0;
+            width: 96%;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar ul li {
+            float: left;
+        }
+        .navbar ul li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            font-size: 18px;
+            text-decoration: none;
+        }
+        .navbar ul li a:hover {
+            background-color: darkgray;
+            color: black;
+        }
+        .div1 {
+            width: 100%;
+            height: 10%;
+            background-color: dodgerblue;
+        }
+        .div7 {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 96%;
+        }
+        .div7 p {
+            margin: 0;
+        }
+        .scrolling-content {
+            position: relative;
+            /* z-index: 2; */
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 50px;
+            margin-top: -0vh; 
+            margin-bottom: 100vh;
+            height: 1000px;
+        }
+
+        button {
+            padding: 30px 30px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color:darkslategray;
+            color: white;
+            border: none;
+            border-radius: 0 5px;
+        }
+        .button1 {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: crimson;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color:rgb(25, 56, 56);
+        }
+        dialog {
+            width: 1000px;
+            padding: 20px;
+            border: 1px solid gainsboro;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: white;
+        }
+        dialog h2 {
+            margin-top: 0;
+        }
+        dialog pre {
+            margin-bottom: 20px;
+            font-size: 20px;
+        }
+        dialog button {
+            background-color: crimson;
+        }
+        dialog button:hover {
+            background-color: red;
+        }
+        .newdiv {
+            display: flex;
+            justify-content: space-between;
+        }
+        span {
+            color:maroon;
+        }
+        .span1 {
+            color: orangered;
+        }
+        .span2 {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="div1">
+
+    </div>
+    <div class="navbar" id="navbar">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+
+    <div class="content">
+        <embed src="eyedotblue.jpg" width="100%" class="div2" alt="bg">
+    </div>
+
+    <div class="scrolling-content">
+        <h2>Content</h2>
+        <p>Click on disirable box and view the inside content.</p>
+        <div class="newdiv">
+            <div class="fordiv">
+                <button id="openButton">Click Here</button>
+                <dialog id="openedDialog">
+                    <h2>This is a Dialog</h2>
+                    <!-- lorem20 -->
+<pre>
+    <html lang="en">
+&lt;<span>!DOCTYPE html</span>&gt;
+&lt;<span>html</span> <span class="span1">lang</span>=<span class="span2">"en"</span>&gt;
+&lt;<span>head</span>head&gt;
+    &lt;<span>meta</span> charset=<span class="span2">"UTF-8"</span>&gt;
+    &lt;<span>meta</span> name=<span class="span2">"viewport"</span> content=<span class="span2">"width=device-width, initial-scale=1.0"</span>&gt;
+&lt;<span>title</span>&gt;index&lt;/<span>title</span>&gt;
+&lt;<span>style</span>&gt;
+    <span>body</span> {
+        <span class="span1">background-color</span>: aqua;
+        <span class="span1">font-size</span>:xx-large;
+    }
+    <span>.section1</span> {
+        <span class="span1">background-color</span>:white;
+        <span class="span1">height</span>: 100px;
+    }
+    <span>.section2</span> {
+        <span class="span1">background-color</span>: black;
+        <span class="span1">height</span>: 100px;
+        <span class="span1">float</span>: left;
+    }
+    <span>.sectin2 a</span> {
+        <span class="span1">color</span>: yellow;
+    }
+    <span>#section3</span> {
+        <span class="span1">height</span>: 100px;
+        <span class="span1">background-color</span>: pink;
+        <span class="span1">overflow</span>: hidden;
+        <span class="span1">clear</span>: left;
+        <span class="span1">float</span>: left;
+        <span class="span1">padding-right</span>: 74px;
+        <span class="span1">display</span>: flex;
+        <span class="span1">align-items</span>: center;
+    }
+    <span>#section3 a</span> {
+        <span class="span1">padding-left</span>: 74px;
+    }
+    <span>.section4</span> {
+        <span class="span1">background-color</span>: coral;
+        <span class="span1">height</span>: 100px;
+        <span class="span1">float</span>: left;
+        <span class="span1">margin-left</span>: 20px;
+        <span class="span1">padding-left</span>: 50px;
+    }
+&lt;/<span>style</span>&gt;
+
+&lt;/<span>head</span>&gt;
+&lt;<span>body</span>&gt;
+&lt;<span>h1</span>&gt; A TAG&lt;/<span>h1</span>&gt;
+&lt;<span>div</span> <span class="span1">class</span>="<span class=span2>section1</span>"&gt;
+    &lt;!-- copy this link form text editor --&gt;
+    &lt;<span>table</span>&gt;
+        &lt;<span>a</span> <span class="span1">href</span>=<span class="span2">"https://youtu.be/Mzp9ntJy15w?si=C0I0Zt3AcA7LaMkt"</span>&gt;https://youtu.be/Mzp<wbr>9ntJy15w?si=C0I0Zt3AcA7LaMkt&lt;/<span>a</span>&gt; &lt;<span>br</span>&gt;
+        &lt;<span>a</span>&gt;https://www.google.com/&lt;/<span>a</span>&gt;
+    &lt;/<span>table</span>&gt;
+&lt;/<span>div</span>&gt;
+&lt;<span>div</span> <span class="span1">class</span>="<span class=span2>section2</span>"&gt;
+    &lt;<span>table</span>&gt;
+        &lt;<span>a</span> <span class="span1">href</span>=<span class="span2">"https://youtu.be/Mzp9ntJy15w?si=C0I0Zt3AcA7LaMkt"</span>&gt;10 HTML TAGS&lt;/<span>a</span>&gt; &lt;<span>br</span>&gt;
+        &lt;<span>a</span> <span class="span1">href</span>=<span class="span2">"https://www.google.com/</span>"&gt;Google&lt;/<span>a</span>&gt;
+    &lt;/<span>table</span>&gt;
+&lt;/<span>div</span>&gt; &lt;<span>br</span>&gt;
+&lt;<span>div</span> <span class="span1">id</span>="<span class="span2">section3</span>"&gt;
+    &lt;<span>a</span> <span class="span1">href</span>=<span class="span2">"https://www.google.com/"</span>&gt;Click&lt;/<span>a</span>&gt;
+&lt;/<span>div</span>&gt;
+&lt;<span>div</span> <span class="span1">class</span>="<span class=span2>section4</span>"&gt;
+    &lt;<span>a</span> <span class="span1">href</span>=<span class="span2">"https://www.google.com/"</span>&gt;Press&lt;/<span>a</span>&gt;
+&lt;/<span>div</span>&gt;
+&lt;/<span>body</span>&gt;
+&lt;/<span>html</span>&gt;
+</pre>
+                    <button class="button1" id="closeDialog">Close</button>
+                </dialog>
+            </div>
+            <div class="fordiv">
+                <button id="openButton1">Click Here</button>
+                <dialog id="openedDialog1">
+                    <h2>This is a Dialog</h2>
+                    <!-- lorem20 -->
+<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;abbr tag&lt;/title&gt;
+    &lt;style&gt;
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+        }
+        abbr {
+            text-decoration: none;
+            font-weight: bold;
+        }
+        p {
+            text-align: justify;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;ABBR TAG&lt;/h1&gt;
+    &lt;p&gt;About &lt;abbr title="Master in Computer Application"&gt;MCA&lt;/abbr&gt;&lt;/p&gt;
+    &lt;!-- lorem50 --&gt;
+    &lt;p&gt;<p class="p1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint doloribus numquam velit, accusantium ea, sunt dicta unde maxime culpa deserunt libero hic labore? Sequi temporibus veniam voluptatibus velit tempore reprehenderit similique ipsa, dolorum cupiditate ullam cumque eligendi accusantium, consectetur voluptate repudiandae numquam delectus commodi nulla vel maxime natus. Possimus, odit?</p>&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+                    <button class="button1" id="closeDialog1">Close</button>
+                </dialog>
+            </div>
+            <div class="fordiv">
+                <button id="openButton">Click Here</button>
+                <dialog id="openedDialog">
+                    <h2>This is a Dialog</h2>
+                    <!-- lorem20 -->
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam odio soluta, doloribus necessitatibus id eius quis nam debitis repellendus eveniet.</p>
+                    <button class="button1" id="closeDialog">Close</button>
+                </dialog>
+            </div>
+            <div class="fordiv">
+                <button id="openButton">Click Here</button>
+                <dialog id="openedDialog">
+                    <h2>This is a Dialog</h2>
+                    <!-- lorem20 -->
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam odio soluta, doloribus necessitatibus id eius quis nam debitis repellendus eveniet.</p>
+                    <button class="button1" id="closeDialog">Close</button>
+                </dialog>
+            </div>
+            <div class="fordiv">
+                <button id="openButton">Click Here</button>
+                <dialog id="openedDialog">
+                    <h2>This is a Dialog</h2>
+                    <!-- lorem20 -->
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam odio soluta, doloribus necessitatibus id eius quis nam debitis repellendus eveniet.</p>
+                    <button class="button1" id="closeDialog">Close</button>
+                </dialog>
+            </div>
+            <div class="fordiv">
+                <button id="openButton">Click Here</button>
+                <dialog id="openedDialog">
+                    <h2>This is a Dialog</h2>
+                    <!-- lorem20 -->
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam odio soluta, doloribus necessitatibus id eius quis nam debitis repellendus eveniet.</p>
+                    <button class="button1" id="closeDialog">Close</button>
+                </dialog>
+            </div>
+            <div class="fordiv">
+                <button id="openButton">Click Here</button>
+                <dialog id="openedDialog">
+                    <h2>This is a Dialog</h2>
+                    <!-- lorem20 -->
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam odio soluta, doloribus necessitatibus id eius quis nam debitis repellendus eveniet.</p>
+                    <button class="button1" id="closeDialog">Close</button>
+                </dialog>
+            </div>
+        </div>
+    </div>
+
+    <div class="div7">
+        <p>&copy; 2025 Div Tag. All rights reserved.</p>
+    </div>
+
+    <script>
+        window.onscroll = function() {stickyNavbar()};
+        
+        var navbar = document.getElementById("navbar");
+        var sticky = navbar.offsetTop;
+        
+        function stickyNavbar() {
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("sticky")
+            } else {
+                navbar.classList.remove("sticky");
+            }
+        }
+        /*For button0*/
+        const dialog = document.getElementById('openedDialog');
+        const openDialogButton = document.getElementById('openButton');
+        const closeDialogButton = document.getElementById('closeDialog');
+
+        openDialogButton.addEventListener('click', () => {
+            dialog.showModal();
+        });
+
+        closeDialogButton.addEventListener('click', () => {
+            dialog.close();
+        });
+
+        /*For button1*/
+        const dialog1 = document.getElementById('openedDialog1');
+        const openDialogButton1 = document.getElementById('openButton1');
+        const closeDialogButton1 = document.getElementById('closeDialog1');
+
+        openDialogButton1.addEventListener('click', () => {
+            dialog1.showModal();
+        });
+
+        closeDialogButton1.addEventListener('click', () => {
+            dialog1.close();
+        });
+    </script>
+</body>
+</html>
