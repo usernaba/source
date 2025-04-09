@@ -1,0 +1,44 @@
+.fora {
+    width: 100%;
+    max-width: 800px;
+    max-height: 100%; /* Limit height to viewport */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* position: relative; */
+    /* display: block; */
+    /* flex-direction: column; */
+
+    background-color: aqua;
+    font-size: small;
+}
+.fora .section1 {
+    background-color:white;
+    height: 100px;
+}
+.fora .section2 {
+    background-color: black;
+    height: 100px;
+    float: left;
+}
+.fora .section2 a {
+    color: yellow;
+}
+.fora #section3 {
+    height: 100px;
+    background-color: pink;
+    overflow: hidden;
+    clear: left;
+    float: left;
+    padding-right: 74px;
+    display: flex;
+    align-items: center;
+}
+.fora #section3 a {
+    padding-left: 74px;
+}
+.fora .section4 {
+    background-color: coral;
+    height: 100px;
+    float: left;
+    margin-left: 20px;
+    padding-left: 50px;
+}
